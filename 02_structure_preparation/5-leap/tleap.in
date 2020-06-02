@@ -1,0 +1,19 @@
+source leaprc.gaff
+source leaprc.protein.ff14SB
+addAtomTypes { { "ZN" "Zn" "sp3" } { "N5" "N" "sp3" } { "N6" "N" "sp3" } { "N7" "N" "sp3" } }
+source leaprc.water.tip3p
+loadamberprep ZAFF.prep
+loadamberparams ZAFF.frcmod
+CO2 = loadmol2 CO2.mol2
+c = loadpdb 5Y2S_ph7_mp_ZAFF.pdb
+bond c.261.ZN c.94.NE2  ## HID NE2
+bond c.261.ZN c.96.NE2  ## HID NE2
+bond c.261.ZN c.119.ND2 ## HIE ND2
+bond c.261.ZN c.318.O   ## WAT O
+savepdb c 5Y2S_vac.pdb
+saveamberparm c 5Y2S_vac.prmtop 5Y2S_vac.inpcrd
+addions c CL 0.0
+solvatebox c TIP3PBOX 12.0
+savepdb c 5Y2S_wat.pdb
+saveamberparm c 5Y2S_wat.prmtop 5Y2S_wat_init0.rst
+quit
