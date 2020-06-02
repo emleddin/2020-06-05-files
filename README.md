@@ -18,4 +18,4 @@ to different tasks that made a lot of files to keep things tidy.
 You can download a ZIP file of this repository by selecting the green
 `Clone or Download` button and then selecting `Download ZIP` on this page.
 
-![Download ZIP](https://github.com/emleddin/2020-06-05-files/download-button.png)
+![Download ZIP](https://github.com/emleddin/2020-06-05-files/blob/master/download-button.png)
